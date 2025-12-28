@@ -1,0 +1,3 @@
+module.exports=[37840,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(4762);a.n(d("[project]/OneDrive/Desktop/Ritik-portfolio/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},14965,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(4762);a.n(d("[project]/OneDrive/Desktop/Ritik-portfolio/node_modules/next/dist/client/components/builtin/global-error.js"))},40128,a=>{"use strict";a.i(37840);var b=a.i(14965);a.n(b)}];
+
+//# sourceMappingURL=c3316_next_dist_client_components_builtin_global-error_03062283.js.map
