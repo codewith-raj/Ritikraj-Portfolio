@@ -1,8 +1,0 @@
-{
-  "/_global-error/page": "/_global-error",
-  "/_not-found/page": "/_not-found",
-  "/api/contact/send-otp/route": "/api/contact/send-otp",
-  "/api/contact/verify-otp/route": "/api/contact/verify-otp",
-  "/favicon.ico/route": "/favicon.ico",
-  "/page": "/"
-}
