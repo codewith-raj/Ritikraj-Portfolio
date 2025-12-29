@@ -15,8 +15,7 @@ interface HeroProps {
 
 export function Hero({ onOpenContact }: HeroProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [time, setTime] = useState(() => new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
-  const [isClient, setIsClient] = useState(false);
+  const [time, setTime] = useState("");
   const { scrollY } = useScroll();
   
   // Transform for the hero text
@@ -104,14 +103,11 @@ export function Hero({ onOpenContact }: HeroProps) {
   }, []);
 
   useEffect(() => {
+    setTime(new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
     const interval = setInterval(() => {
       setTime(new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    setIsClient(true);
   }, []);
 
   return (
@@ -122,7 +118,7 @@ export function Hero({ onOpenContact }: HeroProps) {
         
         {/* Big Title */}
       <div className="md:col-span-12 relative z-50 h-[150vh] -mb-[100vh] pointer-events-none">
-          <div className="sticky top-2 pl-1">
+          <div className="sticky top-6 pl-1">
             <motion.h1 
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -249,7 +245,7 @@ export function Hero({ onOpenContact }: HeroProps) {
             
             <div className="mt-8 flex items-center gap-4 text-white/60 font-mono text-sm">
                 <span>LOCAL TIME</span>
-                <span className="min-w-[80px] text-white" suppressHydrationWarning={true}>{isClient ? time : "--:--"}</span>
+                <span className="min-w-[80px] text-white">{time}</span>
             </div>
         </div>
 
