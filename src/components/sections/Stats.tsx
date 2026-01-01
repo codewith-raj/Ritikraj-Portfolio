@@ -19,7 +19,7 @@ const stats = [
     description: "Professional journey in tech & operations"
   },
   { 
-    value: 6, 
+    value: 10, 
     suffix: "+", 
     label: "Modules Mastered", 
     description: "Mastering modern frameworks & tools"

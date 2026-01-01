@@ -10,7 +10,8 @@ import {
   Zap, 
   User, 
   Mail,
-  Radio
+  Radio,
+  FileText
 } from "lucide-react";
 
 interface NavbarProps {
@@ -18,6 +19,19 @@ interface NavbarProps {
 }
 
 export function Navbar({ onOpenContact }: NavbarProps) {
+  const handleResumeClick = () => {
+    // Open in new tab
+    window.open('/resume.pdf', '_blank');
+    
+    // Trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Ritik_Raj_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const navItems = [
     { name: "Home", icon: Home, href: "#" },
     { name: "Projects", icon: Rocket, href: "#work" },
@@ -26,6 +40,7 @@ export function Navbar({ onOpenContact }: NavbarProps) {
     { name: "Simulations", icon: Cpu, href: "#internship" },
     { name: "Arsenal", icon: Zap, href: "#skills" },
     { name: "Profile", icon: User, href: "#about" },
+    { name: "Resume", icon: FileText, action: handleResumeClick, highlight: true },
     { name: "Comms", icon: Mail, action: onOpenContact },
   ];
 
@@ -52,8 +67,9 @@ export function Navbar({ onOpenContact }: NavbarProps) {
 
 function DockItem({ item }: { item: any }) {
   const isAction = !!item.action;
+  const isHighlight = !!item.highlight;
   const Component = isAction ? motion.button : motion.a;
-  const props = isAction ? { onClick: item.action } : { href: item.href };
+  const props = isAction ? { onClick: item.action } : { href: item.href, target: item.target, download: item.download };
 
   return (
     <div className="relative group flex flex-col items-center shrink-0">
@@ -71,9 +87,11 @@ function DockItem({ item }: { item: any }) {
             className={`
                 relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-xl 
                 transition-all duration-300
-                ${isAction 
-                    ? 'bg-accent/10 text-accent border border-accent/20 hover:bg-accent hover:text-white hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]' 
-                    : 'bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white hover:border-white/20 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]'
+                ${isHighlight
+                    ? 'bg-green-500/10 text-green-500 border-green-500/20 hover:bg-green-500 hover:text-white hover:shadow-[0_0_20px_rgba(34,197,94,0.5)]'
+                    : isAction
+                        ? 'bg-accent/10 text-accent border border-accent/20 hover:bg-accent hover:text-white hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]' 
+                        : 'bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white hover:border-white/20 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]'
                 }
             `}
         >

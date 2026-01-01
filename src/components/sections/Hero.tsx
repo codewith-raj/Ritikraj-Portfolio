@@ -243,7 +243,7 @@ export function Hero({ onOpenContact }: HeroProps) {
              Building meaningful Projects, websites, <span className="text-white/40">and digital experiences through thoughtful design and clean execution.</span>
             </motion.p>
             
-            <div className="mt-8 flex items-center gap-4 text-white/60 font-mono text-sm">
+            <div className="mt-16 flex items-center gap-4 text-white/60 font-mono text-sm">
                 <span>LOCAL TIME</span>
                 <span className="min-w-[80px] text-white">{time}</span>
             </div>

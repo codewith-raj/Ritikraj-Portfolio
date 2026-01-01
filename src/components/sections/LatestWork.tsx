@@ -158,7 +158,11 @@ export function LatestWork() {
             </div>
         </div>
 
-        <Button variant="outline" className="hidden md:flex backdrop-blur-md border-white/20 hover:bg-white/10 font-mono uppercase tracking-wider">
+        <Button 
+          variant="outline" 
+          className="hidden md:flex backdrop-blur-md border-white/20 hover:bg-white/10 font-mono uppercase tracking-wider"
+          onClick={() => window.open('https://github.com/codewith-raj?tab=repositories', '_blank')}
+        >
           Access Full Database <ArrowRight className="ml-2 w-4 h-4" />
         </Button>
       </div>

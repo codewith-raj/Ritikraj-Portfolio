@@ -35,7 +35,7 @@ export function Footer({ onOpenContact }: FooterProps) {
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 md:mb-32">
-           <h2 className="text-5xl md:text-[10vw] leading-[0.8] font-heading font-bold uppercase max-w-4xl">
+           <h2 className="text-5xl md:text-[10vw] leading-[0.9] font-heading font-bold uppercase max-w-4xl">
               Join the <br />
               <span className="text-white/40">Cosmic Expedition.</span>
            </h2>
@@ -73,7 +73,7 @@ export function Footer({ onOpenContact }: FooterProps) {
                  </li>
                  <li className="flex items-center gap-3 group">
                     <FileText className="w-4 h-4 text-accent" />
-                    <a href="#" className="hover:text-white transition-colors uppercase tracking-wider">Download Flight Log</a>
+                    <a href="/resume.pdf" download="Ritik_Raj_Resume.pdf" className="hover:text-white transition-colors uppercase tracking-wider">Download Flight Log</a>
                  </li>
               </ul>
            </div>
