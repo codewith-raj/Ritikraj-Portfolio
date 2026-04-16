@@ -172,7 +172,7 @@ export function Certifications() {
                 <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#3b82f6]" />
                 Clearance Levels
             </div>
-            <h2 className="text-5xl md:text-7xl font-heading font-bold uppercase tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-7xl font-heading font-bold uppercase tracking-tight">
                 License <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">Keys</span>
             </h2>
             <p className="text-xl text-white/60 max-w-2xl mt-6">
@@ -204,7 +204,7 @@ export function Certifications() {
                 <div className={`absolute -inset-0.5 bg-gradient-to-r ${cert.color} rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-lg`} />
                 
                 {/* Card Main */}
-                <div className="relative h-full bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 overflow-hidden hover:border-white/20 transition-colors duration-300 flex flex-col justify-between">
+                <div className="relative h-full bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 md:p-8 overflow-hidden hover:border-white/20 transition-colors duration-300 flex flex-col justify-between">
                     {/* Grid Overlay */}
                     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxwYXRoIGQ9Ik0gMSAwIEwgMCAwIEwgMCAxIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4=')] opacity-20" />
                     

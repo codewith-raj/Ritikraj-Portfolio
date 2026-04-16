@@ -66,7 +66,7 @@ export function Internship() {
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
             Professional Growth
         </div>
-        <h2 className="text-5xl md:text-8xl font-heading font-bold uppercase tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-8xl font-heading font-bold uppercase tracking-tight">
             Intern<span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">ships</span>
         </h2>
       </div>

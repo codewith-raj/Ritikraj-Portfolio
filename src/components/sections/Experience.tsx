@@ -176,7 +176,7 @@ export function Experience() {
                     className="relative min-w-[85vw] md:min-w-[400px] snap-center group"
                 >
                      {/* Existing Card Design for Mobile */}
-                    <div className="bg-white/5 border border-white/10 rounded-2xl p-8 h-full flex flex-col relative overflow-hidden">
+                    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 h-full flex flex-col relative overflow-hidden">
                         <div className="relative z-10">
                             <div className="flex justify-between items-start mb-6">
                                 <div className="p-3 bg-white/5 rounded-xl text-accent">

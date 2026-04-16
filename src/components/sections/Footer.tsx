@@ -35,12 +35,12 @@ export function Footer({ onOpenContact }: FooterProps) {
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 md:mb-32">
-           <h2 className="text-5xl md:text-[10vw] leading-[0.9] font-heading font-bold uppercase max-w-4xl">
+           <h2 className="text-3xl sm:text-4xl md:text-[10vw] leading-[0.9] font-heading font-bold uppercase max-w-4xl">
               Join the <br />
               <span className="text-white/40">Cosmic Expedition.</span>
            </h2>
            <div className="mt-8 md:mt-0">
-              <Button size="lg" className="text-xl px-12 py-8 rounded-full font-mono uppercase tracking-wider hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-shadow duration-300" onClick={() => onOpenContact ? onOpenContact() : window.open('mailto:ritikrajunique111@gmail.com')}>
+              <Button size="lg" className="text-lg px-8 py-6 md:text-xl md:px-12 md:py-8 rounded-full font-mono uppercase tracking-wider hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-shadow duration-300" onClick={() => onOpenContact ? onOpenContact() : window.open('mailto:ritikrajunique111@gmail.com')}>
                  Launch Mission <ArrowRight className="ml-2" />
               </Button>
            </div>

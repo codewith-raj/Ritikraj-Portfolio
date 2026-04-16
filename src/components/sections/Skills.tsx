@@ -117,7 +117,7 @@ export function Skills() {
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#3b82f6]" />
             System Modules
         </div>
-        <h2 className="text-5xl md:text-7xl font-heading font-bold uppercase tracking-tight relative z-10">
+        <h2 className="text-3xl sm:text-4xl md:text-7xl font-heading font-bold uppercase tracking-tight relative z-10">
             Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">Constellations</span>
         </h2>
         

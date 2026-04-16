@@ -81,7 +81,7 @@ export function Stats() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-heading font-bold uppercase text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40"
+            className="text-3xl sm:text-4xl md:text-7xl font-heading font-bold uppercase text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40"
          >
             System <span className="text-accent">Metrics</span>
          </motion.h2>

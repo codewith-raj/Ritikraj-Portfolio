@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ritik/OneDrive/Desktop/Ritik-portfolio/src/components/ui/ScrollProgress.tsx"],"sourcesContent":["\"use client\";\n\nimport { motion, useScroll, useSpring } from \"framer-motion\";\n\nexport function ScrollProgress() {\n  const { scrollYProgress } = useScroll();\n  const scaleX = useSpring(scrollYProgress, {\n    stiffness: 100,\n    damping: 30,\n    restDelta: 0.001\n  });\n\n  return (\n    <motion.div\n      className=\"fixed top-0 left-0 right-0 h-1 bg-accent origin-left z-[100]\"\n      style={{ scaleX }}\n    />\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;AAAA;AAAA;;;AAFA;;AAIO,SAAS;;IACd,MAAM,EAAE,eAAe,EAAE,GAAG,IAAA,sOAAS;IACrC,MAAM,SAAS,IAAA,sOAAS,EAAC,iBAAiB;QACxC,WAAW;QACX,SAAS;QACT,WAAW;IACb;IAEA,qBACE,0OAAC,oPAAM,CAAC,GAAG;QACT,WAAU;QACV,OAAO;YAAE;QAAO;;;;;;AAGtB;GAdgB;;QACc,sOAAS;QACtB,sOAAS;;;KAFV"}}]
+}
