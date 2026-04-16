@@ -10,8 +10,8 @@ export function About() {
 
       <div className="max-w-5xl relative z-10">
         <div className="flex items-center gap-2 mb-6 text-accent/80 font-mono text-sm tracking-widest uppercase">
-             <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#3b82f6]" />
-             Cosmic Profile
+             <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#FF4500]" />
+             About
         </div>
         
         <h2 className="text-xl md:text-3xl font-light leading-snug text-white/90 flex flex-col gap-6">

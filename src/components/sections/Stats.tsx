@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 const stats = [
   { 
-    value: 8, 
+    value: 9, 
     suffix: "+", 
     label: "Systems Deployed",
     description: "Delivering excellence across web & mobile platforms"

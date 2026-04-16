@@ -17,7 +17,6 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [otpData, setOtpData] = useState<{ hash: string; expiry: number } | null>(null);
   const [error, setError] = useState("");
-  const [attempts, setAttempts] = useState(0);
   
   const otpInputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
@@ -31,7 +30,6 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         setOtpData(null);
         setError("");
         setIsSubmitting(false);
-        setAttempts(0);
       }, 300);
     }
   }, [isOpen]);
@@ -162,7 +160,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <div className="space-y-6">
                   <div>
                     <h2 className="text-3xl font-heading font-bold uppercase mb-2">Let's Connect</h2>
-                    <p className="text-white/60 text-sm">Tell us about your project or just say hello.</p>
+                    <p className="text-white/60 text-sm">Tell me about your project or just say hello.</p>
                   </div>
 
                   <form onSubmit={handleSendOTP} className="space-y-4">
@@ -199,7 +197,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         onChange={handleInputChange}
                         rows={4}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors resize-none"
-                        placeholder="Tell us a bit about your project..."
+                        placeholder="Tell me a bit about your project..."
                       />
                     </div>
 
@@ -284,7 +282,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <div>
                     <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
                     <p className="text-white/60 max-w-xs mx-auto">
-                      Thanks for reaching out, {formData.name}. We'll get back to you shortly.
+                      Thanks for reaching out, {formData.name}. I'll get back to you shortly.
                     </p>
                   </div>
                   <Button onClick={onClose} variant="outline">

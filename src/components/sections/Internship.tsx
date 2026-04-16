@@ -1,7 +1,7 @@
 "use client";
 
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { Building2, Calendar, MapPin, Briefcase, Terminal, ArrowRight } from "lucide-react";
+import { Building2, Calendar, MapPin } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 

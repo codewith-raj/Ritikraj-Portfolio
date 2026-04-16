@@ -3,59 +3,113 @@
 import { useState, useRef, useEffect } from "react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Button } from "@/components/ui/Button";
-import { ArrowUpRight, ArrowRight, Code, Zap, Layers, Smartphone, Rocket } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Code, Zap, Layers, Smartphone, Rocket, Database, Shield, Globe, Server } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
+  {
+    id: "01",
+    title: "Task Manager API",
+    category: "Backend / Productivity",
+    type: "Web",
+    description: "A RESTful API for managing tasks with structured endpoints, authentication, and full CRUD operations for efficient task tracking.",
+    tech: ["Node.js", "Express", "MongoDB", "JWT"],
+    image: "/ChatGPT Image Apr 17, 2026, 04_58_34 AM.png",
+    imageStyle: "cover",
+    icon: <Database className="w-4 h-4" />,
+    link: "https://task-manager-api-6omj.onrender.com/api-docs"
+  },
+  {
+    id: "02",
+    title: "KAVACH",
+    category: "AI / Disaster Management",
+    type: "Web",
+    description: "An intelligent disaster response and simulation system using AI and RAG models to enhance decision-making and crisis management.",
+    tech: ["Python", "AI/ML", "RAG", "LLM"],
+    image: "/Black_Modern_A_letter_Logo-removebg-preview.png",
+    imageStyle: "logo",
+    icon: <Shield className="w-4 h-4" />,
+    link: "https://kavach-frontend-two.vercel.app/"
+  },
+  {
+    id: "03",
+    title: "Digital Heroes SaaS",
+    category: "SaaS / Web Platform",
+    type: "Web",
+    description: "A SaaS-based platform designed for scalable digital solutions, featuring user management, APIs, and deployment-ready architecture.",
+    tech: ["React", "Node.js", "Express", "MongoDB"],
+    image: "/ChatGPT Image Apr 17, 2026, 05_06_42 AM.png",
+    imageStyle: "logo",
+    icon: <Globe className="w-4 h-4" />,
+    link: "https://digital-heroes-rydq.vercel.app/"
+  },
+  {
+    id: "04",
+    title: "School Management API",
+    category: "Backend / Education",
+    type: "Web",
+    description: "A backend system for managing school operations including students, teachers, and administrative workflows through REST APIs.",
+    tech: ["Node.js", "Express", "MongoDB"],
+    image: "/ChatGPT Image Apr 17, 2026, 04_59_44 AM.png",
+    imageStyle: "logo",
+    icon: <Server className="w-4 h-4" />,
+    link: "https://github.com/codewith-raj/School-management-api"
+  },
   { 
-    id: "01", 
+    id: "05", 
     title: "NOVA", 
     category: "AI Assistant", 
     type: "App", 
     description: "Next-gen Virtual Assistant leveraging AI to streamline digital interactions.",
     tech: ["Python", "NLP", "ML"],
     image: "/Virtual-AI-assistant-1536x806.png", 
-    icon: <Smartphone className="w-4 h-4" /> 
+    icon: <Smartphone className="w-4 h-4" />,
+    link: ""
   },
   { 
-    id: "02", 
+    id: "06", 
     title: "MUJ-Marketplace", 
     category: "E-commerce", 
     type: "Web", 
     description: "Campus-focused e-commerce platform for students to buy, sell, and trade securely.",
     tech: ["Node.js", "MongoDB", "Express"],
     image: "/mqdefault.jpg", 
-    icon: <Zap className="w-4 h-4" /> 
+    icon: <Zap className="w-4 h-4" />,
+    link: ""
   },
   { 
-    id: "03", 
+    id: "07", 
     title: "Spiko", 
     category: "Extension", 
     type: "Web", 
     description: "Real-time audio translation browser extension for inclusive online education.",
     tech: ["React", "Chrome Ext", "GCP"],
     image: "/1631341422849.jpg", 
-    icon: <Code className="w-4 h-4" /> 
+    icon: <Code className="w-4 h-4" />,
+    link: ""
   },
   { 
-    id: "04", 
+    id: "08", 
     title: "Vartul", 
     category: "Blockchain", 
     type: "Web", 
     description: "Decentralized social platform with Proof-of-Stake consensus and token rewards.",
     tech: ["Blockchain", "Smart Contracts"],
     image: "/vezzra.svg", 
-    icon: <Layers className="w-4 h-4" /> 
+    imageStyle: "logo",
+    icon: <Layers className="w-4 h-4" />,
+    link: ""
   },
   { 
-    id: "05", 
+    id: "09", 
     title: "Khushi Travels", 
     category: "Travel", 
     type: "Web", 
     description: "Full-stack cab booking web application for smooth and reliable rides.",
     tech: ["Full Stack", "React", "Node"],
     image: "/ChatGPT Image Dec 28, 2025, 12_29_12 AM.png", 
-    icon: <Zap className="w-4 h-4" /> 
+    icon: <Zap className="w-4 h-4" />,
+    link: ""
   }
 ];
 
@@ -131,7 +185,7 @@ export function LatestWork() {
         <div className="flex flex-col gap-8">
             <div>
                 <div className="flex items-center gap-2 mb-4 text-accent/80 font-mono text-sm tracking-widest uppercase">
-                    <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#3b82f6]" />
+                    <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#FF4500]" />
                     Mission Highlights
                 </div>
                 <h2 className="text-3xl sm:text-4xl md:text-8xl font-heading font-bold uppercase tracking-tight">
@@ -183,7 +237,8 @@ export function LatestWork() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-                className="group relative cursor-pointer min-w-[85vw] md:min-w-[500px] flex-shrink-0"
+                onClick={() => project.link && window.open(project.link, '_blank')}
+                className={`group relative min-w-[85vw] md:min-w-[500px] flex-shrink-0 ${project.link ? 'cursor-pointer' : 'cursor-default'}`}
             >
                 {/* Holographic Glow Effect */}
                 <div className="absolute -inset-[1px] bg-gradient-to-b from-white/20 to-transparent rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
@@ -200,13 +255,13 @@ export function LatestWork() {
                         </div>
                     </div>
 
-                    <div className={`aspect-[4/3] md:aspect-[16/10] rounded-3xl overflow-hidden relative ${project.image.startsWith('/') ? 'bg-black' : project.image} mb-6`}>
+                    <div className={`aspect-[4/3] md:aspect-[16/10] rounded-3xl overflow-hidden relative ${project.image.startsWith('/') ? 'bg-[#0d0d0d]' : project.image} mb-6`}>
                         {project.image.startsWith('/') && (
-                           <div className={`absolute inset-0 ${project.title === 'Vartul' ? 'p-10' : 'p-4'}`}>
+                           <div className={`absolute inset-0 flex items-center justify-center ${project.imageStyle === 'logo' ? 'p-12' : 'p-4'}`}>
                                <img 
                                   src={project.image} 
                                   alt={project.title} 
-                                  className={`w-full h-full ${project.title === 'Vartul' ? 'object-contain' : 'object-cover'} rounded-2xl shadow-lg border border-white/5 transition-transform duration-700 group-hover:scale-105`}
+                                  className={`${project.imageStyle === 'logo' ? 'max-w-[60%] max-h-[70%] w-auto h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]' : 'w-full h-full object-cover rounded-2xl shadow-lg border border-white/5'} transition-transform duration-700 group-hover:scale-105`}
                                />
                            </div>
                         )}
@@ -245,6 +300,9 @@ export function LatestWork() {
                             <div className="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center group-hover:scale-110 group-hover:bg-accent group-hover:border-accent group-hover:text-black transition-all duration-300">
                                 <ArrowUpRight className="w-6 h-6" />
                             </div>
+                            {project.link && (
+                              <div className="absolute -top-8 right-0 text-[9px] font-mono text-white/30 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">View Live</div>
+                            )}
                             {/* Orbit Effect */}
                             <div className="absolute inset-0 border border-dashed border-white/20 rounded-full animate-[spin_10s_linear_infinite] group-hover:border-white/40 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
@@ -256,7 +314,7 @@ export function LatestWork() {
       </div>
       
       <div className="mt-8 md:hidden">
-        <Button variant="outline" className="w-full">
+        <Button variant="outline" className="w-full" onClick={() => window.open('https://github.com/codewith-raj?tab=repositories', '_blank')}>
           View All Projects <ArrowRight className="ml-2 w-4 h-4" />
         </Button>
       </div>

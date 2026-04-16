@@ -10,7 +10,6 @@ import {
   Zap, 
   User, 
   Mail,
-  Radio,
   FileText
 } from "lucide-react";
 
@@ -20,16 +19,7 @@ interface NavbarProps {
 
 export function Navbar({ onOpenContact }: NavbarProps) {
   const handleResumeClick = () => {
-    // Open in new tab
     window.open('/resume.pdf', '_blank');
-    
-    // Trigger download
-    const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'Ritik_Raj_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   const navItems = [

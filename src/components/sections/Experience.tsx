@@ -2,7 +2,7 @@
 
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Briefcase, Calendar, ChevronRight, Building2 } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const experiences = [
@@ -32,8 +32,6 @@ const experiences = [
   }
 ];
 
-export { experiences };
-
 export function Experience() {
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -42,7 +40,7 @@ export function Experience() {
     <SectionWrapper className="relative overflow-hidden py-20">
       <div className="mb-16 md:mb-24">
         <div className="flex items-center gap-2 mb-4 text-accent/80 font-mono text-sm tracking-widest uppercase">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#3b82f6]" />
+            <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#FF4500]" />
             Trajectory
         </div>
         <h2 className="text-5xl md:text-7xl font-heading font-bold uppercase tracking-tight">

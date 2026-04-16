@@ -169,7 +169,7 @@ export function Certifications() {
       <div className="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-end gap-8 relative z-10">
         <div>
             <div className="flex items-center gap-2 mb-4 text-accent/80 font-mono text-sm tracking-widest uppercase">
-                <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#3b82f6]" />
+                <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_#FF4500]" />
                 Clearance Levels
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-7xl font-heading font-bold uppercase tracking-tight">
