@@ -37,7 +37,7 @@ const projects = [
     category: "SaaS / Web Platform",
     type: "Web",
     description: "A SaaS-based platform designed for scalable digital solutions, featuring user management, APIs, and deployment-ready architecture.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
+    tech: ["React", "Node.js", "Express", "Supabase"],
     image: "/ChatGPT Image Apr 17, 2026, 05_06_42 AM.png",
     imageStyle: "logo",
     icon: <Globe className="w-4 h-4" />,
@@ -49,7 +49,7 @@ const projects = [
     category: "Backend / Education",
     type: "Web",
     description: "A backend system for managing school operations including students, teachers, and administrative workflows through REST APIs.",
-    tech: ["Node.js", "Express", "MongoDB"],
+    tech: ["Node.js", "Express", "Swagger UI"],
     image: "/ChatGPT Image Apr 17, 2026, 04_59_44 AM.png",
     imageStyle: "logo",
     icon: <Server className="w-4 h-4" />,
@@ -261,7 +261,7 @@ export function LatestWork() {
                                <img 
                                   src={project.image} 
                                   alt={project.title} 
-                                  className={`${project.imageStyle === 'logo' ? 'max-w-[60%] max-h-[70%] w-auto h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]' : 'w-full h-full object-cover rounded-2xl shadow-lg border border-white/5'} transition-transform duration-700 group-hover:scale-105`}
+                                  className={`${project.imageStyle === 'logo' ? 'max-w-[40%] max-h-[50%] w-auto h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]' : 'w-full h-full object-cover rounded-2xl shadow-lg border border-white/5'} transition-transform duration-700 group-hover:scale-105`}
                                />
                            </div>
                         )}
